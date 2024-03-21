@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 
+  
+        주문자 : <%= request.getParameter("orderer")  %>
+        <br>
+        
+        커피 : <%= request.getParameter("coffee") %>
+        <br>
+        
+        타입 : <%= request.getParameter("type") %>
+        <br>
+        
+        
+       <%  String[] arr = request.getParameter("opt") %>
+        
+        
+     
+      
+       
+        
+        
+         
+</body>
+</html>

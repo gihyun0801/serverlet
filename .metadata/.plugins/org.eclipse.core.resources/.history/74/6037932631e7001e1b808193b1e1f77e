@@ -1,0 +1,15 @@
+package edu.kh.serverlet.controller;
+
+import jakarta.servlet.http.HttpServlet;
+
+//Controller : 요청(request) 에 따라 어떤 Service를 호출할지 "제어" 
+//             어떻게 응답(Response)을 할지 "제어" 하는 역할
+public class ExampleController1 extends HttpServlet{
+ 
+	 
+	 //클라이언트 요청 -> 서버(Controller -> service - > dao -> db)
+	
+	  
+	  
+	 
+}
