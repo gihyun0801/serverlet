@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
+org.eclipse.wildwebdeveloper.xml.codeLens.enabled=false
 org.eclipse.wildwebdeveloper.xml.downloadExternalResources.enabled=true
