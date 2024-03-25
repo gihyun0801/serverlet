@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     
+    <form action="pizza" method="post">
+
+          
+       <select name="order">
+         <option value="1">치즈 피자(8000)</option>
+         <option value="2">콤비네이션 피자(9000)</option>
+         <option value="3">핫치킨 피자(10000)</option>
+       </select>
+  
+       <br>
+       <label>
+
+         L : <input type="checkbox" name="size" value="L">
+
+       </label>
+
+       <label>
+
+        R : <input type="checkbox" name="size" value="R">
+
+      </label>
+
+      <br><br>
+
+      수량 : 
+      <button id="minus" type="button">-</button>
+      <span id="span">0</span>
+      <button id="plus" type="button">+</button>
+
+      <br><br>
+
+      <input type="hidden" name="amount" value="0">
+
+      <br><br>
+
+      <button>주문하기</button>
+
+
+
+    </form>
+  
+     
+    <script>
+
+            const plus = document.getElementById("plus");
+            const minus = document.getElementById("minus");
+            const span = document.getElementById("span");
+
+            const amount = document.querySelector("[name='amount']");
+
+            plus.addEventListener("click", () => {
+                span.innerText++;
+                amount.value = span.innerText;
+            });
+
+            minus.addEventListener("click", () => {
+             
+                if(span.innerText == 0){
+                    return;
+                }else{
+                    span.innerText--;
+                amount.value = span.innerText;
+                }
+            });
+
+    </script>
+
+</body>
+</html>
