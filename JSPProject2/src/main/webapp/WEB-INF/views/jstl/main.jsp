@@ -131,6 +131,23 @@
      <br>
      <a href="loop">JSTL을 이용한 반복문</a>
      
+     <hr><hr><hr>
+     
+     <%-- 현재 경로 : localhost : 8080/jstl/main --%>
+     <%-- 목표 경로 : jstl/student/selectAll --%>
+     
+     <a href="student/selectAll">workbook에서 학생 전체 조회하기</a>
+     
+    <a href="student/selectGun">workbook에서 건축공학과인 학생만 찾기</a>  
+    
+    
+    <form action="student/selectOne" method="post">
+     
+     <%-- input에다가 학과명 작성하면 거기있는 학생들 조회 --%>
+      <input type="text" name="deptName">
+      <button>찾기</button>
+    
+    </form>   
      
 </body>
 </html>
