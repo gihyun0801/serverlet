@@ -37,6 +37,8 @@
              
              <button>로그인</button>
              
+             <a href="/signup" class="signup">회원가입</a>
+             
            </form>
         
         </c:when>
@@ -63,21 +65,17 @@
            
            <c:otherwise>
             
-              <c:forEach var="todo" items="${todoList}">
-                <table>
-                
-                 <tr>
-                   <td>${todo.todoTitle }</td>
-                   <td>${todo.todoMemo }</td>
-                   <td>${todo.todoDate }</td>
-                   <td><a class="upadate-btn">수정</a></td>
-                   <td><a class="delete-btn">삭제</a></td>
-                 
-                 </tr>
-                </table>
-                
-              
-              </c:forEach>
+          <table>
+  <c:forEach var="todo" items="${todoList}">
+    <tr>
+      <td>${todo.todoTitle}</td>
+      <td>${todo.todoMemo}</td>
+      <td>${todo.todoDate}</td>
+      <td><a class="update-btn" href="/update?todoNo=${todo.todoNo}" onclick="return confirm('정말 수정하시겠습니까?')">수정</a></td>
+      <td><a class="delete-btn" href="/delete?todoNo=${todo.todoNo}" onclick="return confirm('정말 삭제하시겠습니까 ?')">삭제</a></td>
+    </tr>
+  </c:forEach>
+</table>
              
            
            </c:otherwise>
@@ -88,7 +86,7 @@
         
          <div class="button-div">
          
-            <a class="insert-btn">등록하기</a>
+            <a href="/insert" class="insert-btn">등록하기</a>
             <a href="/logout" class="logout-btn">로그아웃</a>
          </div>
         
